@@ -1,0 +1,64 @@
+<header class="navbar navbar-fixed navbar-inverse">
+	<div class="navbar-inner">
+		<div class="container">
+			<%= link_to "custom app", root_path, id: "logo" %>
+			<nav>
+				<ul class="nav pull-right">
+					<li id="contactBttn"><a>Contact Us</a></li>
+					<li><%= link_to "link2", '#' %></li>
+					<li id="fat-menu" class="dropdown">
+              			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+               			 New Contact <b class="caret"></b>
+              			</a>
+		              	<ul class="dropdown-menu">
+			                <li><%= link_to "Profile", '#' %></li>
+			                <li><%= link_to "Settings", '#' %></li>
+			            </ul>
+                	</li>
+              	</ul>
+            </li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+	<div id="contact">
+		<span id="close">X</span>
+		<h2>Contact Us!</h2>
+		<p> Contact Contact Contact Contact Contact Contact Contact</p>
+		<%= render 'layouts/contact_form' %>
+	</div>
+
+
+</header>
+
+<script type="text/javascript">
+
+(function(){
+
+var contactForm = {
+	//contact: $('div#contact'),
+
+	init: function() {
+		var container = $('div#contact'),
+			cButton = $('li#contactBttn');
+
+		cButton.on('click', function() {
+			
+			cButton.toggleClass("active");
+			container.slideToggle();
+			
+		} );
+
+		container.find('span#close').on('click', function() {
+			container.slideUp();
+			cButton.removeClass("active");
+		});
+	}
+};
+
+contactForm.init();
+
+})();
+
+</script>

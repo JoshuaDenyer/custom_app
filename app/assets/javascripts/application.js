@@ -14,3 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+//$('#contactBttn a').css('color', 'red');
+//$('h1').css('color', 'red');
