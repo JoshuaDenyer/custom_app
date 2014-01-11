@@ -5,7 +5,7 @@
 			<nav>
 				<ul class="nav pull-right">
 					<li id="contactBttn"><a>Contact Us</a></li>
-					<li><%= link_to "link2", '#' %></li>
+					<li><%= link_to "About", about_path %></li>
 					<li id="fat-menu" class="dropdown">
               			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
                			 New Contact <b class="caret"></b>
@@ -25,8 +25,7 @@
 	<div id="contact">
 		<span id="close">X</span>
 		<h2>Contact Us!</h2>
-		<p> Contact Contact Contact Contact Contact Contact Contact</p>
-		<%= render 'layouts/contact_form' %>
+		<%= render 'shared/contact_form' %>
 	</div>
 
 

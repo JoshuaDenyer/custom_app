@@ -1,0 +1,16 @@
+<%= form_for ( @contact = Contact.new ) do |f| %>
+	<%= render 'shared/error_messages', object: f.object %>
+
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+
+	<%= f.label :email %>
+	<%= f.text_field :email %>
+
+	<div class="comment">
+	<%= f.label :comments %>
+	<%= f.text_field :comments, rows: "10" %>
+	</div>
+
+	<%= f.submit "Send Email", class: "btn btn-large btn-primary" %>
+<% end %>

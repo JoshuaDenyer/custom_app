@@ -25,19 +25,22 @@ h1 {
 
 #contact {
   display:none;
+  padding-left: 3em;
   background: #333333;
-  width: 300px;
+  width: 400px;
   margin-top: 0;
   color: white;
-  text-align: center;
   position: absolute;
   right: 205px;
+
+    /*text-align: center;*/
+
   #close{
     position: absolute;
     font-family: sans-serif;
     cursor: pointer;
     font-weight: bold;
-    right: 10px;
+    right: 15px;
     top: 10px;
   }
 }
@@ -56,4 +59,20 @@ h1 {
     color: white;
     text-decoration: none;
   }
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 90%;
+  margin-bottom: 15px;
+  line-height: 6em;
+  font-size: 2em;
+  @include box_sizing;
+}
+
+
+input {
+  height: auto !important;
 }
