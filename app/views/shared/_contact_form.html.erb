@@ -1,10 +1,10 @@
 <%= form_for ( @contact = Contact.new ) do |f| %>
 	<%= render 'shared/error_messages', object: f.object %>
 
-	<%= f.label :name %>
+	<%= f.label :name, "Contact Name" %>
 	<%= f.text_field :name %>
 
-	<%= f.label :email %>
+	<%= f.label :email, "Contact Email" %>
 	<%= f.text_field :email %>
 
 	<div class="comment">
